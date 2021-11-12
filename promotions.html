@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promitions </title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        $(document).ready(function(){
+
+            var products = [];
+
+            products = JSON.parse(localStorage.getItem('products'));
+            showProducts(products);
+
+            $('.btnUpdate').click(function(){
+                var id = $(this).attr('prod_id');
+                var promotion = $(this).closest('tr').find('select').val();
+                var product = products.find(function(product) {
+                    return product.id === id;
+                })
+                if (promotion = "none")
+                    promotion = "";
+                product.promotion = promotion;
+                localStorage.setItem('products', JSON.stringify(products));
+                showProducts(products);
+            })
+        });
+
+        
+
+        function showProducts(products) {
+            var rows = '';
+            products.forEach(function (p, index) {
+
+                rows += `<tr>
+                    <th scope="row">${index}</th>
+                    <td>${p.name}</td>
+                    <td><img style="width: 100px;" src="${p.image}" alt=""></td>
+                    <td>
+                      <select class="form-control">
+                            <option value="0">none</option>
+                            <option value="1">buy 2 get 10%</option>
+                            <option value="2">buy on weekend get 5%</option>
+                        </select>
+                        <strong>${getPromotion(p.promotion)}</strong>
+                     </td>
+                    <td><a class="btn btn-danger btnUpdate" prod_id="${p.id}">Update</a></td>
+                </tr>`;
+            });
+
+            $('#products-body').html(rows);
+        }
+
+        function getPromotion(promotion){
+            switch(promotion){
+                case '0':
+                    return 'None'
+                    break;
+                case '1':
+                    return 'buy 2 get 10%'
+                    break;
+                case '2':
+                    return 'buy in weekend get 5%'
+                    break;
+                default:
+                    return "None"
+            }
+        }
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Eden Cosmetics</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Store <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="manager.html">Manager <span class="sr-only">(current)</span></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<h1 class="page-header">Promotions</h1>
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product</th>
+            <th scope="col">Image</th>
+            <th scope="col">Promotion</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody id="products-body">
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>
+                <select class="form-control">
+                    <option value="0">none</option>
+                    <option value="1">buy 2 get 10%</option>
+                    <option value="2">buy until next week get 5%</option>
+                </select>
+            </td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

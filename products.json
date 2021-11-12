@@ -1,0 +1,112 @@
+[
+  {
+    "id": "6f8d8630-2d27-01c9-dc8e-05da244dacb1",
+    "name": "Emla Cream 5g",
+    "description": "Emla Cream 5g the best",
+    "price": 20,
+    "image": "https://cdn.shopify.com/s/files/1/0418/0662/6967/products/8926-DEFAULT-L_900x.jpg?v=1602628711",
+    "quantity": 100,
+    "maker": "Emla",
+    "category": "Creams",
+    "tags": "Creams,Emla,5g"
+  },
+  {
+    "id": "07d70bac-1369-d013-58c7-648953616185",
+    "name": "Nelsons Arnica Cream",
+    "description": "Nelsons Arnica Cream the best",
+    "price": 20,
+    "image": "https://www.superdrug.com/medias/sys_master/front-src/front-src/h11/hc0/11613887365150/Nelsons-Arnica-Cream-228993.jpg",
+    "quantity": 100,
+    "maker": "Nelsons",
+    "category": "Creams",
+    "tags": "Creams,Nelsons,5g"
+  },
+  {
+    "id": "aa8fc37e-ba76-7d5a-4dc9-e00d9d19ec2a",
+    "name": "CLINIQUE",
+    "description": "Broad Spectrum SPF 50 Sunscreen Face Cream",
+    "price": 20,
+    "image": "https://www.sephora.com/productimages/sku/s1151711-main-zoom.jpg?imwidth=270",
+    "quantity": 100,
+    "maker": "CLINIQUE",
+    "category": "Creams",
+    "tags": "Creams,CLINIQUE,5g"
+  },
+  {
+    "id": "348ef190-1185-6110-f411-63a7533197fc",
+    "name": "SKINFIX",
+    "description": "Barrier+ Triple Lipid-Peptide Face Cream",
+    "price": 20,
+    "image": "https://www.sephora.com/productimages/sku/s2215945-main-zoom.jpg?imwidth=270&pb=2020-03-allure-clean-2019",
+    "quantity": 100,
+    "maker": "SKINFIX",
+    "category": "Creams",
+    "tags": "Creams,SKINFIX,5g"
+  },
+  {
+    "id": "01dca027-5d72-f527-af5c-708bf21e4abf",
+    "name": "SK-II",
+    "description": "R.N.A. POWER Anti-Aging Face Cream",
+    "price": 20,
+    "image": "https://www.sephora.com/productimages/sku/s1785229-main-zoom.jpg?imwidth=270",
+    "quantity": 100,
+    "maker": "SK-II",
+    "category": "Creams",
+    "tags": "Creams,SK-II,5g"
+  },
+  {
+    "id": "0b40a787-3808-cf1d-1acd-3e941169e900",
+    "name": "Jimmy Choo",
+    "description": "by Jimmy Choo Women Fragrances",
+    "price": 70,
+    "image": "https://img.perfume.com/images/products/sku/small/67930w.jpg",
+    "quantity": 100,
+    "maker": "Jimmy Choo",
+    "category": "Perfumes",
+    "tags": "Jimmy Choo,Perfumes"
+  },
+  {
+    "id": "56c6632d-ad38-cd21-6397-4731cf2b97a2",
+    "name": "Angel",
+    "description": "by Thierry Mugler\nWomen's Fragrances",
+    "price": 50,
+    "image": "https://img.perfume.com/images/products/sku/small/650w.jpg",
+    "quantity": 100,
+    "maker": "Angel",
+    "category": "Perfumes",
+    "tags": "Angel,Perfumes"
+  },
+  {
+    "id": "d42d235b-c6dc-12d5-03af-b3efea0911b3",
+    "name": "Obsession",
+    "description": "by Calvin Klein Womens Fragrances",
+    "price": 50,
+    "image": "https://img.perfume.com/images/products/sku/small/1002w.jpg",
+    "quantity": 100,
+    "maker": "Obsession",
+    "category": "Perfumes",
+    "tags": "Obsession,Perfumes"
+  },
+  {
+    "id": "9eee6563-7f3a-da7b-c709-e75b5a220ec8",
+    "name": "White Diamonds",
+    "description": "by Thierry Mugler\nWomen's Fragrances",
+    "price": 50,
+    "image": "https://img.perfume.com/images/products/sku/small/1349w.jpg",
+    "quantity": 100,
+    "maker": "White Diamonds",
+    "category": "Perfumes",
+    "tags": "White Diamonds,Perfumes"
+  },
+  {
+    "id": "1f62c9f3-b98c-672d-d2fc-760567bf59cf",
+    "name": "Ariana Grande Cloud",
+    "description": "by Ariana Grande\nWomen's Fragrances",
+    "price": 50,
+    "image": "https://img.perfume.com/images/products/sku/small/77794w.jpg",
+    "quantity": 100,
+    "maker": "Ariana Grande Cloud",
+    "category": "Perfumes",
+    "tags": "Ariana Grande Cloud,Perfumes"
+  }
+]
